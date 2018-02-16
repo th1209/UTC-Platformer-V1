@@ -103,7 +103,8 @@ public class CharacterControl : MonoBehaviour
 
     public void Die()
     {
-        // TODO 状態管理...
+        // ひとまず､自分自身で自分を削除する｡
+        Destroy(transform.parent.gameObject);
         _stageControl.SendMessage("ChangeStage", StageControl.STATE.START);
     }
 
